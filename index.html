@@ -7,8 +7,8 @@
 
     <!-- Uses a transparent header that draws on top of the layout's background -->
     <style>
-        .mdl-layout__header {
-            background-color: rgba(0, 0, 0, 0.3);
+        .mdl-layout__header, .mdl-mega-footer, .mdl-card {
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         .demo-layout-transparent {
@@ -20,6 +20,30 @@
             /* This background is dark, so we set text to white. Use 87% black instead if
                your background is light. */
             color: white;
+        }
+
+        .demo-card-wide.mdl-card {
+            width: 512px;
+        }
+
+        .demo-card-wide > .mdl-card__title {
+            color: #fff;
+            height: 176px;
+            background: url('images/knife.png') center / cover;
+        }
+
+        .demo-card-wide > .mdl-card__menu {
+            color: #fff;
+        }
+
+        .content{
+            color: white;
+            margin: auto;
+            text-align: center;
+            width: 50%;
+        }
+        .title{
+            font-size: xx-large;
         }
     </style>
 </head>
@@ -35,7 +59,7 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation -->
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="">Sign in/Register</a>
+                <a class="mdl-navigation__link" href="">My account</a>
             </nav>
         </div>
     </header>
@@ -49,7 +73,122 @@
         </nav>
     </div>
     <main class="mdl-layout__content">
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--6-col">
+                <div class="content">
+                    <p class="title">
+                        Play with best players around the world to improve your rank and skills!
+                    </p>
+                    Register now for free.
+                </div>
+
+                <!--                content-->
+
+            </div>
+            <div class="mdl-cell mdl-cell--6-col">
+                <div class="mdl-card mdl-shadow--16dp util-center util-spacing-h--40px">
+                    <div class="mdl-card__supporting-text mdl-grid">
+
+                        <b class="mdl-color-text--accent">Error message goes here</b>
+
+
+                        <form method="POST" action="">
+                            <input type="hidden" name="action" value="register"/>
+
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+                                <label class="mdl-textfield__label mdl-color-text--grey" for="textfield_new_username">Username</label>
+                                <input class="mdl-textfield__input" type="text" id="textfield_new_username"
+                                       name="username" pattern="^[a-z0-9_-]{3,15}$"/>
+                                <span class="mdl-textfield__error">3-15 characters with only lowercase letters, digits, underscore, and hyphen</span>
+                            </div>
+
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+                                <label class="mdl-textfield__label mdl-color-text--grey" for="textfield_new_password">Password</label>
+                                <input class="mdl-textfield__input" type="password" id="textfield_new_password"
+                                       name="password"
+                                       pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})"/>
+                                <span class="mdl-textfield__error">
+                        6-20 characters with at least a digit, lowercase and uppercase letters,
+                        and special symbol in @#$%
+                    </span>
+                            </div>
+
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
+                                <label class="mdl-textfield__label mdl-color-text--grey"
+                                       for="textfield_password_confirm">Password Confirm</label>
+                                <input class="mdl-textfield__input" type="password" id="textfield_password_confirm"
+                                       name="password_confirm"/>
+                            </div>
+
+                            <div class="mdl-cell mdl-cell--12-col send-button" align="center">
+                                <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored"
+                                        id="login">
+                                    Register
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+    <footer class="mdl-mega-footer">
+        <div class="mdl-mega-footer__middle-section">
+
+            <div class="mdl-mega-footer__drop-down-section">
+                <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                <h1 class="mdl-mega-footer__heading">Features</h1>
+                <ul class="mdl-mega-footer__link-list">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Terms</a></li>
+                    <li><a href="#">Partners</a></li>
+                    <li><a href="#">Updates</a></li>
+                </ul>
+            </div>
+
+            <div class="mdl-mega-footer__drop-down-section">
+                <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                <h1 class="mdl-mega-footer__heading">Details</h1>
+                <ul class="mdl-mega-footer__link-list">
+                    <li><a href="#">Specs</a></li>
+                    <li><a href="#">Tools</a></li>
+                    <li><a href="#">Resources</a></li>
+                </ul>
+            </div>
+
+            <div class="mdl-mega-footer__drop-down-section">
+                <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                <h1 class="mdl-mega-footer__heading">Technology</h1>
+                <ul class="mdl-mega-footer__link-list">
+                    <li><a href="#">How it works</a></li>
+                    <li><a href="#">Patterns</a></li>
+                    <li><a href="#">Usage</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contracts</a></li>
+                </ul>
+            </div>
+
+            <div class="mdl-mega-footer__drop-down-section">
+                <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
+                <h1 class="mdl-mega-footer__heading">FAQ</h1>
+                <ul class="mdl-mega-footer__link-list">
+                    <li><a href="#">Questions</a></li>
+                    <li><a href="#">Answers</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="mdl-mega-footer__bottom-section">
+            <div class="mdl-logo">&copy; 2020 kompotmalinowy</div>
+            <ul class="mdl-mega-footer__link-list">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy & Terms</a></li>
+            </ul>
+        </div>
+
+    </footer>
 </div>
 </body>
 </html>
