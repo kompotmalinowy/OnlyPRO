@@ -84,7 +84,6 @@
         y = parseInt(document.getElementById("targetrank").value) - 1;
 
         if (x >= y) {
-            document.getElementById("currency").innerHTML = "";
             document.getElementById("price").innerHTML = "Your rank cant be higher than destination rank!";
         } else {
             price = rankprices[x][y];
