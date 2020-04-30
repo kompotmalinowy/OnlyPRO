@@ -1,0 +1,33 @@
+.calculatorbox {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 50%;
+}
+
+.myrank {
+    width: 50%;
+    display: block;
+    float: left;
+}
+
+.targetrank {
+    width: 50%;
+    display: block;
+    float: left;
+}
+
+.targetrank:after {
+    clear: both;
+}
+
+.total {
+    clear: both;
+}
+
+.prefcurrency {
+}
+
+#price {
+}
+
+
