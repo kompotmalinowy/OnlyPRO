@@ -56,3 +56,38 @@
 	color: var(--dark-blue);
 	box-shadow: 0 1x 4px 0 rgba(0, 0, 0, 0.05);
 }
+
+body{
+	background-image: linear-gradient(20deg, rgb(92, 0, 0),rgba(0,0,0,1), rgb(129, 48, 1));
+}
+
+input[type = "radio"]{
+	display: none;
+}
+
+.label1{
+	display: inline-block;
+	width: 300px;
+	height: 500px;
+	background-size: 300px 500px;
+}
+
+span{
+	width: 300px;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-weight: 500;
+	font-size: 30px;
+	color: white;
+}
+
+#solobg{
+	background-image: url(../images/solo.jpg);
+}
+
+#duobg{
+	background-image: url(../images/duo.jpg);
+}
